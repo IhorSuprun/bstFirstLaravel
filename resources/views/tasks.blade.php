@@ -42,7 +42,7 @@
             <!-- Заголовок таблицы -->
             <thead>
             <th>name</th>
-            <th>Action</th>
+            <th colspan="2">Action</th>
             </thead>
 
             <!-- Тело таблицы -->
@@ -63,13 +63,15 @@
                                 <i class="fa fa-trash"></i>
                             </button>
                         </form>
-                        <form method="post" action="/taskedit/{{$task->id}}">
+			<td>
+                        <form method="post" action="/task/{{$task->id}}/edit">
 
                             {{ csrf_field() }}
                             <button type="submit">
                                 <i class="fa fa-edit"></i>
                             </button>
                         </form>
+			<td>
                     </td>
                 </tr>
                 @endforeach

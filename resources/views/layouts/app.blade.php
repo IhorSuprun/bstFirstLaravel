@@ -10,7 +10,9 @@
     <body>
 	<div class="container">
 	    <nav class="navbar navbar-default">
-		<a href="{{url('/')}}">Home</a>
+		<a href="{{url('/')}}">Задачи</a>
+		<a href="{{url(route('news.index'))}}">Новости</a>
+		<a href="{{url(route('news.create'))}}">Добавить новость</a>
 	    </nav>
 	</div>
 	@yield('content')
